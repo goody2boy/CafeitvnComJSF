@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 19, 2013 11:25:08 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.News" table="NEWS" schema="CAFEITVN">
+        <id name="newsId" type="int">
+            <column name="NEWS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoriesId" type="int">
+            <column name="CATEGORIES_ID" not-null="true" />
+        </property>
+        <property name="newsName" type="string">
+            <column name="NEWS_NAME" length="500" />
+        </property>
+        <property name="newsTitle" type="string">
+            <column name="NEWS_TITLE" length="32700" />
+        </property>
+        <property name="newsContent" type="string">
+            <column name="NEWS_CONTENT" length="32700" />
+        </property>
+        <property name="author" type="string">
+            <column name="AUTHOR" length="100" />
+        </property>
+        <property name="date" type="date">
+            <column name="DATE" length="10" not-null="true" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="IMAGE_URL" length="100" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>
